@@ -3,18 +3,33 @@ Service:
   DeployType: ros
   DeployMetadata:
     SupplierDeployMetadata:
+      RoleName: gushen-dataset-test
+      UserType: Aliyun
+      SupplierTemplateConfigs:
+        - Name: Template
+          Url: 'ros_templates/template.yaml'
+          PredefinedParameters: []
+          HiddenParameterKeys:
+            - VpcId
+            - VSwitchId
+            - ZoneId
+          ParameterMappings:
+            - ParameterKey: RegionId
+              ParameterMappingKeys:
+                - VpcId
+                - ZoneId
+                - VSwitchId
+              ParameterValueMapping:
+                cn-hangzhou:
+                  Parameters:
+                    VpcId: vpc-bp1j3ie92jbgftbnbg92t
+                    ZoneId: cn-hangzhou-i
+                    VSwitchId: vsw-bp1oyaskfbk4z3vrg3yb6
       FileArtifactRelation:
         '{{ computenest::file::hanans426_mysql-managed-ack-demo }}':
           ArtifactId: ${Artifact.Artifact_1.ArtifactId}
           ArtifactVersion: ${Artifact.Artifact_1.ArtifactVersion}
-    TemplateConfigs:
-      - Name: 单机版
-        Url: 'ros_templates/template.yaml'
-        AllowedRegions:
-          - cn-hangzhou
-          - cn-shanghai
-          - cn-beijing
-  ServiceType: private
+  ServiceType: managed
   ServiceInfo:
     Locale: zh-CN
     ShortDescription: demo
