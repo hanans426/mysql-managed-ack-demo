@@ -117,7 +117,7 @@ Resources:
     Properties:
       SecurityGroupName:
         Ref: ALIYUN::StackName
-      VpcId: vpc-bp1j3ie92jbgftbnbg92t
+      VpcId: vpc-bp1l31uxiodwfw0ozvz1g
       SecurityGroupIngress:
         - PortRange: 80/80
           Priority: 1
@@ -134,8 +134,8 @@ Resources:
         Ref: PayPeriodUnit
       Period:
         Ref: PayPeriod
-      VpcId: vpc-bp1j3ie92jbgftbnbg92t
-      VSwitchId: vsw-bp1oyaskfbk4z3vrg3yb6
+      VpcId: vpc-bp1l31uxiodwfw0ozvz1g
+      VSwitchId: vsw-bp19lqa1c94nk19knmo33
       ZoneId: cn-hangzhou-i
       SecurityGroupId:
         Ref: SecurityGroup

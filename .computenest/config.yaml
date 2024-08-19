@@ -22,9 +22,9 @@ Service:
               ParameterValueMapping:
                 cn-hangzhou:
                   Parameters:
-                    VpcId: vpc-bp1j3ie92jbgftbnbg92t
+                    VpcId: vpc-bp1l31uxiodwfw0ozvz1g
                     ZoneId: cn-hangzhou-i
-                    VSwitchId: vsw-bp1oyaskfbk4z3vrg3yb6
+                    VSwitchId: vsw-bp19lqa1c94nk19knmo33
       FileArtifactRelation:
         '{{ computenest::file::hanans426_mysql-managed-ack-demo }}':
           ArtifactId: ${Artifact.Artifact_1.ArtifactId}
